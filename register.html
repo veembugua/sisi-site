@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Register - Sisi</title>
+  </head>
+  <body>
+    <header>
+      <h1>Sisi</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="participate.html">Participate</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li>
+            <a href="https://www.cog.go.ke" target="_blank" rel="noopener"
+              >Council of Governors</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Register for Sisi</h2>
+
+      <!-- The form sends data to a public echo service for testing -->
+      <form action="https://httpbin.org/post" method="post">
+        <!-- Fieldset 1: Location -->
+        <fieldset>
+          <legend>Where you take part</legend>
+          <p>
+            <label for="county">County</label>
+            <select id="county" name="county" required>
+              <option value="">Choose your county</option>
+              <option value="kiambu" selected>Kiambu</option>
+              <option value="nairobi">Nairobi City</option>
+              <option value="machakos">Machakos</option>
+              <option value="nakuru">Nakuru</option>
+              <option value="kisumu">Kisumu</option>
+              <option value="mombasa">Mombasa</option>
+            </select>
+          </p>
+          <p>
+            <label for="ward">Ward</label>
+            <!-- The 'list' attribute connects this input to the datalist below (Task 5) -->
+            <input
+              id="ward"
+              name="ward"
+              type="text"
+              required
+              list="wards-list"
+              autocomplete="off"
+            />
+            <datalist id="wards-list">
+              <option value="Juja"></option>
+              <option value="Kalimoni"></option>
+              <option value="Witeithie"></option>
+              <option value="Theta"></option>
+              <option value="Thika Town"></option>
+            </datalist>
+          </p>
+        </fieldset>
+
+        <!-- Fieldset 2: Contact Info -->
+        <fieldset>
+          <legend>How we reach you</legend>
+          <p>
+            <label for="name">Full name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              required
+              autocomplete="name"
+            />
+          </p>
+          <p>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" />
+          </p>
+          <p>
+            <label for="phone">Phone</label>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              pattern="^\+?[0-9\s]{9,15}$"
+              autocomplete="tel"
+            />
+          </p>
+          <p>Send notifications by:</p>
+          <p>
+            <label
+              ><input type="radio" name="channel" value="sms" checked />
+              SMS</label
+            >
+          </p>
+          <p>
+            <label
+              ><input type="radio" name="channel" value="email" /> Email</label
+            >
+          </p>
+          <p>
+            <label
+              ><input type="radio" name="channel" value="both" /> Both</label
+            >
+          </p>
+        </fieldset>
+
+        <!-- Fieldset 3: Preferences -->
+        <fieldset>
+          <legend>What you want to hear about</legend>
+          <p>
+            <label
+              ><input type="checkbox" name="topic" value="health" />
+              Health</label
+            >
+          </p>
+          <p>
+            <label
+              ><input type="checkbox" name="topic" value="water" /> Water</label
+            >
+          </p>
+          <p>
+            <label
+              ><input type="checkbox" name="topic" value="roads" /> Roads</label
+            >
+          </p>
+          <p>
+            <label
+              ><input type="checkbox" name="topic" value="education" />
+              Education</label
+            >
+          </p>
+          <p>
+            <label for="views">Your view on the draft budget (optional)</label>
+            <textarea id="views" name="views" rows="4"></textarea>
+          </p>
+        </fieldset>
+
+        <!-- Consent -->
+        <p>
+          <label>
+            <input type="checkbox" name="consent" value="yes" required />
+            I agree to receive county notifications for my ward.
+          </label>
+        </p>
+
+        <button type="submit">Register</button>
+      </form>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2026 Sisi · <a href="mailto:habari@sisi.example">Contact</a> ·
+        <a href="privacy.html">Privacy notice</a>
+      </p>
+    </footer>
+  </body>
+</html>
