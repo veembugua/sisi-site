@@ -7,22 +7,35 @@
   </head>
   <body>
     <!-- HEADER: Site-wide introductory content -->
-    <header>
-      <h1>Sisi</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="participate.html">Participate</a></li>
-          <li><a href="register.html">Register</a></li>
-          <li><a href="privacy.html">Privacy notice</a></li>
-          <li>
-            <a href="https://www.cog.go.ke" target="_blank" rel="noopener"
-              >Council of Governors</a
-            >
-          </li>
-        </ul>
-      </nav>
+    <header class="site-header">
+      <!-- Group the logo and title together so they stay on the left -->
+      <div class="site-brand">
+        <img
+          src="images/logo.png"
+          alt="Sisi Platform Logo"
+          width="40"
+          height="40"
+        />
+        <h1>Sisi</h1>
+      </div>
+      <!-- The ward selector will be pushed to the right by Flexbox -->
+      <span class="ward-selector">Kiambu County</span>
     </header>
+
+    <!-- Added class="site-nav" so we can target it in CSS -->
+    <nav class="site-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="participate.html">Participate</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="privacy.html">Privacy notice</a></li>
+        <li>
+          <a href="https://www.cog.go.ke" target="_blank" rel="noopener"
+            >Council of Governors</a
+          >
+        </li>
+      </ul>
+    </nav>
 
     <!-- MAIN: The unique content of this specific page -->
     <main>
@@ -130,6 +143,28 @@
             </tr>
           </tfoot>
         </table>
+      </section>
+
+      <section>
+        <h3>Visual Budget Allocation</h3>
+
+        <div class="budget">
+          <span class="budget-label">Health</span>
+          <span class="budget-amount">42,000,000 KES</span>
+          <div class="budget-bar" style="width: 100%"></div>
+        </div>
+
+        <div class="budget">
+          <span class="budget-label">Roads</span>
+          <span class="budget-amount">35,000,000 KES</span>
+          <div class="budget-bar" style="width: 83%"></div>
+        </div>
+
+        <div class="budget">
+          <span class="budget-label">Water</span>
+          <span class="budget-amount">28,000,000 KES</span>
+          <div class="budget-bar" style="width: 66%"></div>
+        </div>
       </section>
 
       <section>
