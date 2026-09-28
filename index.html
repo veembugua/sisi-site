@@ -3,47 +3,173 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Sisi — your county, your voice</title>
+    <title>Sisi — Kiambu County Public Participation</title>
+    <!-- Lab 0: External stylesheet linked -->
+    <link rel="stylesheet" href="styles/main.css" />
   </head>
-  <body>
+  <body class="county-kiambu">
     <!-- HEADER: The top of your site -->
-    <header>
-      <img src="images/logo.png" alt="Sisi" width="120" height="120" />
-      <h1>Sisi</h1>
-
-      <!-- Move your <nav> block inside the header -->
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="participate.html">Participate</a></li>
-          <li><a href="register.html">Register</a></li>
-          <li><a href="privacy.html">Privacy notice</a></li>
-          <li>
-            <a href="https://www.cog.go.ke" target="_blank" rel="noopener"
-              >Council of Governors</a
-            >
-          </li>
-        </ul>
-      </nav>
+    <header class="site-header">
+      <!-- Group the logo and title together so they stay on the left -->
+      <div class="site-brand">
+        <img
+          src="images/logo.png"
+          alt="Sisi Platform Logo"
+          width="40"
+          height="40"
+        />
+        <h1>Sisi</h1>
+      </div>
+      <!-- The ward selector will be pushed to the right by Flexbox -->
+      <span class="ward-selector">Kiambu County</span>
     </header>
 
+    <!-- Added class="site-nav" so we can target it in CSS -->
+    <nav class="site-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="participate.html">Participate</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="privacy.html">Privacy notice</a></li>
+        <li>
+          <a href="https://www.cog.go.ke" target="_blank" rel="noopener"
+            >Council of Governors</a
+          >
+        </li>
+      </ul>
+    </nav>
+
     <!-- MAIN: The unique content of this specific page -->
+     <div class="page">
     <main>
-      <!-- ARTICLE: Self-contained content that makes sense on its own -->
+      <a href="#window">Jump to the current window</a>
+
+      <!-- NEW: County Notices Section (Required for CSS Lab 2) -->
+      <section>
+        <h2>County Notices</h2>
+
+        <!-- Notice 1: Urgent (has both classes) -->
+        <article id="featured" class="notice notice-urgent">
+          <span class="ribbon">Closing soon</span>
+          <h3>Kiambu County Budget Forum — Juja Ward</h3>
+          <p class="notice-date">30 June 2026</p>
+          <p>
+            Draft allocation for ward development funds. Comments close at
+            midnight.
+          </p>
+          <a href="participate.html" class="btn">Give your view</a>
+        </article>
+
+        <!-- Notice 2: Normal -->
+        <article class="notice">
+          <h3>Water Project Update — Kalimoni</h3>
+          <p class="notice-date">15 July 2026</p>
+          <p>
+            New borehole drilling scheduled for next week. Community input
+            welcome.
+          </p>
+          <a href="participate.html" class="btn">Give your view</a>
+        </article>
+
+        <!-- Notice 3: Normal -->
+        <article class="notice">
+          <h3>ECD Classroom Block — Theta</h3>
+          <p class="notice-date">20 July 2026</p>
+          <p>
+            Construction of new early childhood classrooms begins. View the
+            timeline.
+          </p>
+          <a href="participate.html" class="btn">Give your view</a>
+        </article>
+      </section>
+
+      <section>
+        <h2>Local Projects Open for Voting</h2>
+        <div class="project-list">
+          <article class="project-card">
+            <h3>Murram Access Road</h3>
+            <p>
+              Kalimoni ward needs a new access road to connect the market to the
+              main highway.
+            </p>
+            <a href="register.html" class="btn">Vote</a>
+          </article>
+          <article class="project-card">
+            <h3>Borehole and Water Kiosk</h3>
+            <p>
+              Witeithie ward is voting on a new solar-powered water kiosk to
+              provide clean water.
+            </p>
+            <a href="register.html" class="btn">Vote</a>
+          </article>
+          <article class="project-card">
+            <h3>ECD Classroom Block</h3>
+            <p>
+              Theta ward is expanding the early childhood development center
+              with new classrooms.
+            </p>
+            <a href="register.html" class="btn">Vote</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- ARTICLE: Self-contained content -->
       <article>
         <h2>What Sisi does</h2>
-        <!-- Move your "What Sisi does" paragraphs and images here -->
-        <p><strong>Sisi</strong> is Swahili for <span lang="sw">us</span>...</p>
+        <p>
+          <strong>Sisi</strong> is Swahili for <span lang="sw">us</span>. It is
+          a public participation platform for Kenya's 47 counties, piloting in
+          Kiambu since <time datetime="2026-09">September 2026</time>.
+        </p>
+        <p>
+          Register once in your county and ward. After that you receive every
+          county notice, draft bill and budget hearing that affects
+          <em>your</em> ward, and you can respond
+          <strong>online</strong> instead of travelling to a hall on a working
+          day.
+        </p>
+        <figure>
+          <img
+            src="images/baraza.jpg"
+            alt="Residents raising hands to vote at a ward budget meeting in Juja"
+            width="800"
+            height="533"
+          />
+          <figcaption>Ward budget hearing, Juja, June 2026.</figcaption>
+        </figure>
       </article>
 
       <!-- SECTION: A thematic grouping with its own heading -->
       <section id="window">
         <h2>Participation window</h2>
-        <!-- Move your "Participation window" and "Who can take part" content here -->
         <p>
           Comments on the draft county budget close on
           <time datetime="2026-09-30">30 September 2026</time>.
         </p>
+
+        <h3>Who can take part</h3>
+        <p>
+          Any resident registered in a Kenyan county can participate in local
+          decisions.
+        </p>
+        <p>
+          You must be 18 years or older and have a valid phone number for
+          verification.
+        </p>
+
+        <p>
+          We focus on key documents like the
+          <abbr title="County Integrated Development Plan">CIDP</abbr> and the
+          <abbr title="County Budget and Economic Forum">CBEF</abbr>.
+        </p>
+
+        <blockquote cite="https://example.com/resident-quote">
+          <p>
+            "For the first time, I felt like my voice actually mattered in how
+            our roads are built."
+          </p>
+          <footer>— <cite>Jane Mwangi, Juja Ward</cite></footer>
+        </blockquote>
       </section>
 
       <!-- ASIDE: Tangential content, like a sidebar -->
@@ -51,11 +177,14 @@
         <h2>Next forum</h2>
         <p>Ward budget hearing, Juja, 12 September.</p>
       </aside>
+    </div>
+
+      <p><a href="mailto:habari@sisi.example">Email the team</a></p>
+      <p><a href="tel:+254700000000">Call the county desk</a></p>
     </main>
 
     <!-- FOOTER: The bottom of your site -->
     <footer>
-      <!-- Notice the &copy; character reference for the copyright symbol! -->
       <p>
         &copy; 2026 Sisi · <a href="mailto:habari@sisi.example">Contact</a> ·
         <a href="privacy.html">Privacy notice</a>
